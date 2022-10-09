@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+  </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>EcoFriend</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <!-- <img src="static/images/logo.png" alt=""> -->
+            <span>
+              EcoFriend
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/loggedin">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">Missions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/service">Quiz</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/portfolio">Videos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/news"> Articles </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Tips</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+
+      <div class="slider_bg-container">
+
+      </div>
+      <div class="slider-container">
+
+        <div class="detail-box">
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+          </a>
+          <h1>
+            {{user}}
+          </h1>
+          <h3>
+            Level {{level}}
+          </h3>
+          <h3>
+            Points: {{points}}
+          </h3>
+          <!-- <div>
+            <a href="/login" class="slider-link">
+              
+            </a>
+          </div> -->
+        </div>
+        <div class="img-box">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="background-color: purple;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="static/images/slider-img.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="static/images/slider-img2.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="static/images/slider-img3.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="static/images/slider-img4.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="static/images/slider-img5.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="static/images/slider-img6.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="static/images/slider-img7.jpg" alt="">
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+  <section class="about_section layout_padding">
+    <h2 style="text-align: center; padding-bottom: 60px;">October Missions</h2>
+    <div class="myboxclass" style="display:inline-block;margin-left: 20rem; margin-right:20px;">
+      <div class="myboxclass-inner">
+        <div class="myboxclass-front">
+          <h2 style="padding:20px;">Mission #1</h2>
+          <h4>Plant a tree!</h4>
+        </div>
+        <div class="myboxclass-back">
+          <h4 style="padding:50px; font-size: 15px;">It can be any tree you like, just make sure to give it enough water and sunlight!
+          Take a picture of you planting the seed so you can get points for it!</h4>
+        </div>
+      </div>
+    </div>
+    <div class="myboxclass" style="display:inline-block;margin-right:20px;">
+        <div class="myboxclass-inner">
+          <div class="myboxclass-front">
+            <h2>Front Side</h2>
+          </div>
+          <div class="myboxclass-back">
+            <h2>Back Side</h2>
+          </div>
+        </div>
+      </div>
+      <div class="myboxclass" style="display:inline-block">
+        <div class="myboxclass-inner">
+          <div class="myboxclass-front">
+            <h2>Front Side</h2>
+          </div>
+          <div class="myboxclass-back">
+            <h2>Back Side</h2>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- end about section -->
+
+
+  <!-- portfolio section -->
+
+  <section class="portfolio_section layout_padding" style="background-color: darkseagreen;">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Videos
+        </h2>
+        <hr>
+      </div>
+      <p>
+        Taking good care of the environment is hard work, but here are some videos to give you the basic idea!
+      </p>
+      <div class="layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box">
+              <iframe width="420" height="315"
+src="https://www.youtube.com/embed/belXC_IoW4o">
+</iframe>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <iframe width="420" height="315"
+src="https://www.youtube.com/embed/X2YgM1Zw4_E">
+</iframe>
+            
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <iframe width="420" height="315"
+src="https://www.youtube.com/embed/0Puv0Pss33M">
+</iframe>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <iframe width="420" height="315"
+src="https://www.youtube.com/embed/LtEWNxGtvZQ">
+</iframe>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end portfolio section -->
+
+  <section class="news_section layout_padding" style="background-color: #021056;">
+    <h4 style="color:white; text-align:center; font-family: Lato;">Feel like you're ready to test your knowledge? Take the <a href="/service">quiz</a> and earn points fast!</h4>
+    <h5 style="color:white; text-align:center; font-family: Lato;"> Remember, you can only take it once in a month, so try your best!</h5>
+</section>
+  
+
+  <section class="contact_section layout_padding" style="background-color:antiquewhite">
+    <div class="container">
+      <div >
+        <div class="custom_heading-container" style="text-align: center;">
+          
+          <h2 style="padding-left:450px";>
+            October's Tips
+          </h2>
+        </div>
+      </div>
+      <div class="layout_padding-top layout_padding2-bottom">
+        <div class="row" style="padding-bottom:20px; background-color: darkturquoise;border-radius:30px">
+          <div class="col-md-9">
+            
+<br>
+
+            <img class="my-img" style="padding-left:40px; float: right;" width=300 height=500 src="https://climatesafety.info/wp-content/uploads/2013/01/top-tips-to-save-the-earth.jpg">
+            <img class="my-img" style="padding-left:40px; float:right" width=300 height=500 src="https://pbs.twimg.com/media/DtfC68DWkAAkfVr.jpg">
+            <!-- <img class="my-img" style="padding-left:40px;float:right" width=300 height=500 src="https://cdn-infographic.pressidium.com/wp-content/uploads/Top-Tips-To-Staying-Stress-Free-In-The-Work-Place-Infographic-960x2490.png"> -->
+          </div>
+
+        
+
+          
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_social">
+        <div>
+          <a href="">
+            <img src="static/images/fb.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="static/images/twitter.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="static/images/linkedin.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="static/images/insta.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div>
+        <p>
+          EcoFriend is a non-profit organization that strives to encourage people to help keep the enivornment safe and healthy for all types of life.
+          
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2022 EcoFriend
+      
+    </p>
+    
+  </section>
+
+  <!-- footer section -->
+  
+
+
+  <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.js"></script>
+
+</body>
+</body>
+
+</html>
