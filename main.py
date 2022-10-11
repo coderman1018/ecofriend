@@ -20,7 +20,8 @@ class User(db.Model):
   m3 = db.Column(db.Boolean, unique=False, nullable=False)
 
 
-db.create_all()
+with app.app_context():
+  db.create_all()
 
 
 @app.route('/')
