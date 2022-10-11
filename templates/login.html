@@ -16,12 +16,12 @@
     <br>
     <form style="box-shadow:0 4px 2px -2px;margin-bottom: 1rem;border-radius: 20px; padding: 40px; margin-left: 22rem; padding-left:60px; margin-right: 19rem; margin-top: 2rem; background-color:aquamarine;" action="{{ url_for('login') }}" method="POST">
         <label style="font-size: 25px; text-align: center; font-family: Ubuntu; margin-left:65px">Username: &nbsp;</label>
-        <input style="font-size: 19px; text-align: center; font-family: Ubuntu;" name="username" type="text">
+        <input style="font-size: 19px; font-family: Ubuntu;" name="username" type="text" required>
         <br>
         <br>
         <br>
         <label style="font-size: 25px; text-align: center; font-family: Ubuntu; margin-left:65px">Password: &nbsp;</label>
-        <input style="font-size: 19px; text-align: center; font-family: Ubuntu;" name="password" type="text">
+        <input style="font-size: 19px; font-family: Ubuntu;" name="password" type="password" required>
         <br>
         <br>
         <br>
