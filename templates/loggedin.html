@@ -95,12 +95,14 @@
           <h1>
             {{user}}
           </h1>
-          <h3>
-            Level {{level}}
+          <hr width="10%" style="margin-right: 26rem; border-top: dotted 6px; padding:10px;">
+          <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 10px;">
+            Level {{level}} | Points: {{points}}
           </h3>
-          <h3>
+
+          <!-- <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-left: 40px;">
             Points: {{points}}
-          </h3>
+          </h3> -->
           <!-- <div>
             <a href="/login" class="slider-link">
               
@@ -145,9 +147,9 @@
     <!-- end slider section -->
   </div>
 
-  <!-- about section -->
-  <section class="about_section layout_padding">
-    <h2 style="text-align: center; padding-bottom: 60px;">October Missions</h2>
+  <section class="about_section layout_padding" style="background-color:lightcyan">
+    <h2 style="text-align: center; padding-bottom: 20px;">October Missions</h2>
+    <h4 style="padding-bottom: 60px;font-size: 18px; text-align: center;"><i>Flip for details!</i></h4>
     <div class="myboxclass" style="display:inline-block;margin-left: 20rem; margin-right:20px;">
       <div class="myboxclass-inner">
         <div class="myboxclass-front">
@@ -159,28 +161,55 @@
           Take a picture of you planting the seed so you can get points for it!</h4>
         </div>
       </div>
-    </div>
+      {% if one==False: %}
+      <button type="button" class="btn btn-dark btn-md" width="300px" style="margin-left:15px;margin-top:20px" onclick="btnOnClick(1);">Mission Completed</button>
+      {% endif %}
+      {% if one==True: %}
+      <button type="button" class="btn btn-dark btn-md" width="300px" style="margin-left:15px;margin-top:20px" onclick="btnOnClick(1);" disabled>Mission Completed</button>
+      {% endif %}
+
+      </div>
     <div class="myboxclass" style="display:inline-block;margin-right:20px;">
         <div class="myboxclass-inner">
           <div class="myboxclass-front">
-            <h2>Front Side</h2>
+            <h2 style="padding:20px;">Mission #2</h2>
+          <h4>Rake your drain!</h4>
           </div>
           <div class="myboxclass-back">
-            <h2>Back Side</h2>
+            <h4 style="padding:30px; font-size: 15px;">Drains play an important role in reducing floods. You can 
+            make sure they do their job by raking them! Take a picture of you clearing leaves and other trash off a local drain to earn points!</h4>
           </div>
         </div>
+        {% if two==False: %}
+      <button type="button" class="btn btn-dark btn-md" width="300px" style="margin-left:15px;margin-top:20px" onclick="btnOnClick(1);">Mission Completed</button>
+      {% endif %}
+      {% if two==True: %}
+      <button type="button" class="btn btn-dark btn-md" width="300px" style="margin-left:15px;margin-top:20px" onclick="btnOnClick(1);" disabled>Mission Completed</button>
+      {% endif %}
       </div>
       <div class="myboxclass" style="display:inline-block">
         <div class="myboxclass-inner">
           <div class="myboxclass-front">
-            <h2>Front Side</h2>
+            <h2 style="padding:20px;">Mission #3</h2>
+          <h4>Reduce, Reuse, Recycle!</h4>
           </div>
           <div class="myboxclass-back">
-            <h2>Back Side</h2>
+            <h4 style="padding:30px; font-size: 15px;">Did you know it takes 17 trees to make one sheet of paper? 
+            That's why everyone needs to reuse and recycle! Make sure to recycle any scraps of paper, plastic bottles, etc. 
+          Take a picture to earn points!</h4>
           </div>
         </div>
+        {% if three==False: %}
+      <button type="button" class="btn btn-dark btn-md" width="300px" style="margin-left:15px;margin-top:20px" onclick="btnOnClick(1);">Mission Completed</button>
+      {% endif %}
+      {% if three==True: %}
+      <button type="button" class="btn btn-dark btn-md" width="300px" style="margin-left:15px;margin-top:20px" onclick="btnOnClick(1);" disabled>Mission Completed</button>
+      {% endif %}
       </div>
-  </section>
+      <h4 style="font-size: 15px; text-align: center; padding-top: 60px;"><i>Send us an email at <b>ecofriend_support@gmail.com</b> with your username, mission title, and image. Make sure to title the subject "Mission Completed"</i></h4>
+    
+
+    </section>
 
 
   <!-- end about section -->

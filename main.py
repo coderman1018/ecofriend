@@ -20,6 +20,7 @@ class User(db.Model):
 
 db.create_all()
 
+
 @app.route('/')
 def home():
     return render_template("index.html")
@@ -70,21 +71,25 @@ def loggedin():
 
 @app.route('/about')
 def about():
-    return render_template("about.html")
-
-@app.route('/add/<num>')
-def add(num):
-    #one,two,three = session.get('m1', None),session.get('m2', None),session.get('m3', None)
     selected = session.get('user', None)
-    #print(selected)
     myuser = User.query.filter_by(username=selected).first()
-    #current_points = userhere.points
-    #print(User.username)
-     
-    # User.query.filter_by(username=selected).update(dict(points=current_points+10))
-    myuser.points+=10
-    myuser.m1 = True
-    # db.session.merge(myuser)
+    one, two, three=myuser.m1,myuser.m2,myuser.m3
+    return render_template("about.html",one=one,two=two,three=three)
+
+@app.route('/add/<int:num>')
+def add(num):
+    # one,two,three = session.get('m1', None),session.get('m2', None),session.get('m3', None)
+    selected = session.get('user', None)
+    myuser = User.query.filter_by(username=selected).first()
+    if num==1 and myuser.m1==False:
+        myuser.points+=10
+        myuser.m1 = True
+    elif num==2 and myuser.m2==False:
+        myuser.points+=10
+        myuser.m2 = True
+    elif num==3 and myuser.m3==False:
+        myuser.points+=10
+        myuser.m3 = True
     db.session.commit()
     return redirect(url_for('about'))
 

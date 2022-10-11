@@ -19,13 +19,13 @@ body{
     word-break: break-all;
     width:200px;
     height:50px;
-    border : 2px solid blueviolet;
+    /* border : 2px solid blueviolet; */
     text-align: center;
     cursor: pointer;
     position: absolute;
     left:340px;
     top:140px;
-    color : palevioletred;
+    /* color : palevioletred; */
     padding-bottom:50px;
     padding-top:10px;
 }
