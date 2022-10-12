@@ -108,15 +108,15 @@
     </div>
     <button class="btn btn-lg btn-primary" id="getPoints" style="border-radius:10px;margin-left:37.9rem;margin-bottom:5rem;" onclick=clicked() disabled>Get Points</button>
     <script src="static/js/quiz.js"></script>
-    <input type="hidden" name="score" id="myscore" />
+    <!--<input type="hidden" name="score" id="myscore" />-->
 </body>
 
   <!-- end service section -->
 
   <script>
     function clicked() {
-        let total = document.getElementById('myscore').value
-        window.location = `/quiz_add/${total}`;
+        //let total = document.getElementById('myscore').value
+        window.location = `/quiz_add/1`;
     }
   </script>
 
@@ -147,8 +147,7 @@
       </div>
       <div>
         <p>
-          EcoFriend is a non-profit organization that strives to encourage people to help keep the enivornment safe and healthy for all types of life.
-          
+          EcoFriend is a non-profit organization that strives to encourage people to help keep the enivornment safe and healthy for all types of life.          
         </p>
       </div>
     </div>
