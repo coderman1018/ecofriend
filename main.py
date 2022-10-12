@@ -147,6 +147,9 @@ def portfolio():
 def service():
     return render_template("service.html")
 
+@app.route('/article/<num>')
+def article(num):
+    return render_template("article.html")
 
 @app.route('/quiz_add/<int:num>')
 def quiz_add(num):
@@ -162,7 +165,7 @@ def quiz_add(num):
     quiz = "q0" + str(num) + monyr
 
     if quiz not in missionscompleted:
-        myuser.totalpoints += 10
+        myuser.totalpoints += 20
         myuser.missionscompleted += quiz
 
     db.session.commit()
