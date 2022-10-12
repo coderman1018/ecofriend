@@ -210,4 +210,8 @@ function scoreRender(){
     
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
     document.getElementById('myscore').value = scorePerCent;
+
+    if (scorePerCent > 70) {
+        document.getElementById("getPoints").disabled = false;
+    }
 }

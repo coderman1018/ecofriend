@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.secret_key = "coderman-is-the-boss-123"
+app.secret_key = "ecofriend-123"
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///ecofriend.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -20,6 +20,7 @@ class User(db.Model):
     m1 = db.Column(db.Boolean, unique=False, nullable=False)
     m2 = db.Column(db.Boolean, unique=False, nullable=False)
     m3 = db.Column(db.Boolean, unique=False, nullable=False)
+    q1 = db.Column(db.Boolean, unique=False, nullable=False)
 
 
 with app.app_context():
@@ -58,7 +59,8 @@ def signup():
                         points=0,
                         m1=False,
                         m2=False,
-                        m3=False)
+                        m3=False,
+                        q1=False)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('login'))
@@ -71,7 +73,7 @@ def loggedin():
     current = User.query.filter_by(username=myuser).first()
     level = current.level
     points = current.points
-    
+
     return render_template("loggedin.html",
                            user=current.username,
                            level=level,
@@ -122,10 +124,20 @@ def portfolio():
 def service():
     return render_template("service.html")
 
-@app.route('/quiz_add/<num>')
+
+@app.route('/quiz_add/<int:num>')
 def quiz_add(num):
-    print(num)
-    return render_template("service.html")
+    #print('num here is' + num)
+    selected = session.get('user', None)
+    #print('user here is' + selected)
+    myuser = User.query.filter_by(username=selected).first()
+    #print(myuser)
+    if num >= 70 and myuser.q1 == False:
+        myuser.points += 10
+        myuser.q1 = True
+    db.session.commit()
+    return redirect(url_for('loggedin'))
+
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=81)
