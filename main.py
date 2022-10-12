@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "ecofriend-123"
@@ -16,11 +17,8 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False)
     country = db.Column(db.String(10), unique=False, nullable=False)
     level = db.Column(db.Integer, unique=False, nullable=True)
-    points = db.Column(db.Integer, unique=False, nullable=True)
-    m1 = db.Column(db.Boolean, unique=False, nullable=False)
-    m2 = db.Column(db.Boolean, unique=False, nullable=False)
-    m3 = db.Column(db.Boolean, unique=False, nullable=False)
-    q1 = db.Column(db.Boolean, unique=False, nullable=False)
+    totalpoints = db.Column(db.Integer, unique=False, nullable=True)
+    missionscompleted = db.Column(db.String(250), unique=False, nullable=True)
 
 
 with app.app_context():
@@ -41,9 +39,18 @@ def login():
         if myuser:
             session['user'] = myuser.username
             session['level'] = myuser.level
-            session['points'] = myuser.points
-            session['m1'], session['m2'], session[
-                'm3'] = myuser.m1, myuser.m2, myuser.m3
+            session['points'] = myuser.totalpoints
+
+            missionscompleted = myuser.missionscompleted
+            if "m01" in missionscompleted:
+                session['m1'] = True
+            if "m02" in missionscompleted:
+                session['m2'] = True
+            if "m03" in missionscompleted:
+                session['m3'] = True
+            if "q01" in missionscompleted:
+                session['q1'] = True
+
             return redirect(url_for("loggedin"))
     return render_template("login.html")
 
@@ -56,35 +63,47 @@ def signup():
                         email=request.form["email"],
                         country=request.form["country"],
                         level=1,
-                        points=0,
-                        m1=False,
-                        m2=False,
-                        m3=False,
-                        q1=False)
+                        totalpoints=0,
+                        missionscompleted='')
         db.session.add(new_user)
         db.session.commit()
+
         return redirect(url_for('login'))
     return render_template("signup.html")
 
 
 @app.route("/loggedin")
 def loggedin():
-    myuser = session.get('user', None)
-    current = User.query.filter_by(username=myuser).first()
-    level = current.level
-    points = current.points
-
+    current = User.query.filter_by(username=session.get('user', None)).first()
     return render_template("loggedin.html",
                            user=current.username,
-                           level=level,
-                           points=points)
+                           level=current.level,
+                           totalpoints=current.totalpoints)
 
 
 @app.route('/about')
 def about():
     selected = session.get('user', None)
     myuser = User.query.filter_by(username=selected).first()
-    one, two, three = myuser.m1, myuser.m2, myuser.m3
+
+    current_month = datetime.now().strftime('%m')
+    current_year = datetime.now().strftime('%y')
+
+    monyr = current_month + current_year
+    mission1 = "m01" + monyr
+    mission2 = "m02" + monyr
+    mission3 = "m03" + monyr
+
+    one, two, three = False, False, False
+
+    missionscompleted = myuser.missionscompleted
+    if mission1 in missionscompleted:
+        one = True
+    if mission2 in missionscompleted:
+        two = True
+    if mission3 in missionscompleted:
+        three = True
+
     return render_template("about.html", one=one, two=two, three=three)
 
 
@@ -92,15 +111,19 @@ def about():
 def add(num):
     selected = session.get('user', None)
     myuser = User.query.filter_by(username=selected).first()
-    if num == 1 and myuser.m1 == False:
-        myuser.points += 10
-        myuser.m1 = True
-    elif num == 2 and myuser.m2 == False:
-        myuser.points += 10
-        myuser.m2 = True
-    elif num == 3 and myuser.m3 == False:
-        myuser.points += 10
-        myuser.m3 = True
+
+    missionscompleted = myuser.missionscompleted
+
+    current_month = datetime.now().strftime('%m')
+    current_year = datetime.now().strftime('%y')
+
+    monyr = current_month + current_year
+    mission = "m0" + str(num) + monyr
+
+    if mission not in missionscompleted:
+        myuser.totalpoints += 10
+        myuser.missionscompleted += mission
+
     db.session.commit()
     return redirect(url_for('about'))
 
@@ -127,15 +150,23 @@ def service():
 
 @app.route('/quiz_add/<int:num>')
 def quiz_add(num):
-    #print('num here is' + num)
     selected = session.get('user', None)
-    #print('user here is' + selected)
     myuser = User.query.filter_by(username=selected).first()
-    #print(myuser)
-    if num >= 70 and myuser.q1 == False:
-        myuser.points += 10
-        myuser.q1 = True
+
+    missionscompleted = myuser.missionscompleted
+
+    current_month = datetime.now().strftime('%m')
+    current_year = datetime.now().strftime('%y')
+
+    monyr = current_month + current_year
+    quiz = "q0" + str(num) + monyr
+
+    if quiz not in missionscompleted:
+        myuser.totalpoints += 10
+        myuser.missionscompleted += quiz
+
     db.session.commit()
+
     return redirect(url_for('loggedin'))
 
 

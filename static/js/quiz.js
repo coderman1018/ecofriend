@@ -209,7 +209,7 @@ function scoreRender(){
     scoreDiv.innerHTML = "<img src="+ img +">";
     
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
-    document.getElementById('myscore').value = scorePerCent;
+    //document.getElementById('myscore').value = scorePerCent;
 
     if (scorePerCent > 70) {
         document.getElementById("getPoints").disabled = false;
