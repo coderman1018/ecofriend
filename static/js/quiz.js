@@ -209,4 +209,5 @@ function scoreRender(){
     scoreDiv.innerHTML = "<img src="+ img +">";
     
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+    document.getElementById('myscore').value = scorePerCent;
 }

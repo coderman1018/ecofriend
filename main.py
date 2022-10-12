@@ -67,15 +67,11 @@ def signup():
 
 @app.route("/loggedin")
 def loggedin():
-    # current,level,points = session.get('user', None),session.get('level', None),session.get('points', None)
     myuser = session.get('user', None)
-    print(myuser)
     current = User.query.filter_by(username=myuser).first()
     level = current.level
     points = current.points
-    print(current.username)
-    print(current.points)
-    print(current.m1)
+    
     return render_template("loggedin.html",
                            user=current.username,
                            level=level,
@@ -92,7 +88,6 @@ def about():
 
 @app.route('/add/<int:num>')
 def add(num):
-    # one,two,three = session.get('m1', None),session.get('m2', None),session.get('m3', None)
     selected = session.get('user', None)
     myuser = User.query.filter_by(username=selected).first()
     if num == 1 and myuser.m1 == False:
@@ -127,6 +122,10 @@ def portfolio():
 def service():
     return render_template("service.html")
 
+@app.route('/quiz_add/<num>')
+def quiz_add(num):
+    print(num)
+    return render_template("service.html")
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=81)
