@@ -147,10 +147,6 @@ def portfolio():
 def service():
     return render_template("service.html")
 
-@app.route('/article/<num>')
-def article(num):
-    return render_template("article.html")
-
 @app.route('/quiz_add/<int:num>')
 def quiz_add(num):
     selected = session.get('user', None)
@@ -178,7 +174,8 @@ def search():
 
 @app.route('/show_results',methods=["GET","POST"])
 def show_results():
-    return render_template("show_results.html")
+    selected = request.form["city"]
+    return render_template("show_results.html",city=selected.lower())
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=81)

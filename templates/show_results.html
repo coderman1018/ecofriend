@@ -4,27 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EcoFriend</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
     </style>
 </head>
-<body>
-    <h1 style="text-align:center; font-family: Ubuntu;">Tumwater's Results</h1>
-    <li style="margin-left:30rem;width:25%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
-        AQI (Air Quality Index): 34&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bazallergy.com/wp-content/uploads/2015/11/air-quality-index.jpg" target="_blank">See chart</a>
-    </li>
-    <br>
-    <li style="margin-left:30rem;width:25%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
-        Water Quality: Highest possible&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.ci.tumwater.wa.us/home/showpublisheddocument/854/637799166116000000" target="_blank">See report</a>
-        
-    </li>
-    <br>
-    <li style="margin-left:30rem;width:25%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
-        Climate change evidence:<br>Avg. temperature October 2012: 61.42 F.<br>Avg. temperature October 2022: 66.79 F.<br><a href="https://www.ci.tumwater.wa.us/home/showpublisheddocument/854/637799166116000000" target="_blank">See report</a>
-        
-    </li>
+<body style="background-color: lightgreen;">
+    {% if city=='tumwater': %}
+        <br>
+        <br>
+        <br>
+        <div style="padding:30px;padding-bottom:50px;margin-left:4rem;margin-right:4rem;background-color:lightseagreen; border-radius:30px">
+        <h1 style="text-align:center; font-family: Ubuntu;">Tumwater's Results</h1>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            AQI (Air Quality Index): 34&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bazallergy.com/wp-content/uploads/2015/11/air-quality-index.jpg" target="_blank">See chart</a>
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Water Quality: Highest possible&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.ci.tumwater.wa.us/home/showpublisheddocument/22788/637830365552400000" target="_blank">See report</a>
+            
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Climate change evidence:<br>Avg. temperature October 2012: 61.42 F.<br>Avg. temperature October 2022: 66.79 F.<br><a href="https://weatherspark.com/y/928/Average-Weather-in-Tumwater-Washington-United-States-Year-Round#" target="_blank">Learn more</a>
+            
+        </li>
+    </div>
+    {% endif %}
+    {% if city=='london': %}
+        <br>
+        <br>
+        <br>
+        <div style="padding:30px;padding-bottom:50px;margin-left:4rem;margin-right:4rem;background-color:lightseagreen; border-radius:30px">
+        <h1 style="text-align:center; font-family: Ubuntu;">London's Results</h1>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            AQI (Air Quality Index): 24&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bazallergy.com/wp-content/uploads/2015/11/air-quality-index.jpg" target="_blank">See chart</a>
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Water Quality: Best possible&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://london.ca/sites/default/files/2022-03/2021%20Water%20Summary%20Annual%20Report%20FINAL%20with%20EMPS.pdf" target="_blank">See report</a>
+            
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Climate change evidence:<br>Avg. temperature October 2012: 54.42 F.<br>Avg. temperature October 2022: 59.79 F.<br><a href="https://www.timeanddate.com/weather/uk/london/historic?" target="_blank">Learn more</a>
+            
+        </li>
+    </div>
+    {% endif %}
+    {% if city=='delhi': %}
+        <br>
+        <br>
+        <br>
+        <div style="padding:30px;padding-bottom:50px;margin-left:4rem;margin-right:4rem;background-color:lightseagreen; border-radius:30px">
+        <h1 style="text-align:center; font-family: Ubuntu;">Delhi's Results</h1>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            AQI (Air Quality Index): 130&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bazallergy.com/wp-content/uploads/2015/11/air-quality-index.jpg" target="_blank">See chart</a>
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Water Quality: Unsafe tap water&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://delhijalboard.nic.in/daily-drinking-water-quality/delhi-jal-board-djb" target="_blank">See report</a>
+            
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Climate change evidence:<br>Avg. temperature October 2012: 70 F.<br>Avg. temperature October 2022: 79 F.<br><a href="https://www.timeanddate.com/weather/india/delhi/historic?month=10&year=2022" target="_blank">Learn more</a>
+            
+        </li>
+    </div>
+    {% endif %}
+    {% if city=='tokyo': %}
+        <br>
+        <br>
+        <br>
+        <div style="padding:30px;padding-bottom:50px;margin-left:4rem;margin-right:4rem;background-color:lightseagreen; border-radius:30px">
+        <h1 style="text-align:center; font-family: Ubuntu;">Tokyo's Results</h1>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            AQI (Air Quality Index): 41&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bazallergy.com/wp-content/uploads/2015/11/air-quality-index.jpg" target="_blank">See chart</a>
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Water Quality: Moderate, but safe&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.waterworks.metro.tokyo.lg.jp/eng/faq/qa-13.html" target="_blank">See report</a>
+            
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Climate change evidence:<br>Avg. temperature October 2012: 67 F.<br>Avg. temperature October 2022: 72 F.<br><a href="https://www.timeanddate.com/weather/japan/tokyo/historic?month=10&year=2022" target="_blank">Learn more</a>
+            
+        </li>
+    </div>
+    {% endif %}
+    {% if city=='houston': %}
+        <br>
+        <br>
+        <br>
+        <div style="padding:30px;padding-bottom:50px;margin-left:4rem;margin-right:4rem;background-color:lightseagreen; border-radius:30px">
+        <h1 style="text-align:center; font-family: Ubuntu;">Houston's Results</h1>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            AQI (Air Quality Index): 51&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bazallergy.com/wp-content/uploads/2015/11/air-quality-index.jpg" target="_blank">See chart</a>
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Water Quality: Suitable for drinking&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.publicworks.houstontx.gov/sites/default/files/assets/003-water-quality-report-2021.pdf" target="_blank">See report</a>
+            
+        </li>
+        <br>
+        <li style="margin-left:25rem;width:30%;background-color: powderblue; font-family:Ubuntu; list-style:none; padding:20px 20px 20px 20px; border-radius: 20px;">
+            Climate change evidence:<br>Avg. temperature October 2012: 67 F.<br>Avg. temperature October 2022: 72 F.<br><a href="https://www.timeanddate.com/weather/japan/tokyo/historic?month=10&year=2022" target="_blank">Learn more</a>
+            
+        </li>
+    </div>
+    {% endif %}
 </body>
 </html>
