@@ -172,6 +172,13 @@ def quiz_add(num):
 
     return redirect(url_for('loggedin'))
 
+@app.route('/search')
+def search():
+    return render_template("search.html")
+
+@app.route('/show_results',methods=["GET","POST"])
+def show_results():
+    return render_template("show_results.html")
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=81)

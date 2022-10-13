@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic -->
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        </style>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+      
+        <title>EcoFriend</title>
+      
+        <!-- slider stylesheet -->
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="static/css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="static/css/responsive.css" rel="stylesheet" />
+      </head>
+<body style="background-color:lightseagreen">
+    <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="#">
+              <span>
+                EcoFriend
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/loggedin">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">Missions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/service">Quiz</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/portfolio">Videos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/news"> Articles </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact">Tips</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/search">Search</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a class="btn btn-md btn-primary" style="margin-right:20px" onclick="window.location.href='/'" role="button">LOGOUT</a>
+  
+          </nav>
+        </div>
+      </header>
+      <div style="background-color:lightskyblue; padding:50px">
+      <h2 style="text-align:center; margin-top:2rem; font-family: Lato">Search For Statistics!</h2>
+      <hr >
+    <form style="margin-left:29rem; margin-top: 3rem" action="/show_results" method="POST">
+        <label style="font-size: 25px; text-align: center; font-family: Lato;">City: &nbsp;</label>
+        <input style="font-size: 19px; text-align: center; font-family: Lato; display: inline-block;" name="title" type="text">
+        
+        <button class="btn btn-dark btn-md" style="font-family:Lato;margin-left:20px;display:inline-block; font-size: 15px; text-align: center;" type="submit">Search</button>
+    </div>
+    </body>
+</html>
