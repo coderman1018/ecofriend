@@ -78,11 +78,24 @@
       </header>
       <div style="background-color:lightskyblue; padding:50px">
       <h2 style="text-align:center; margin-top:2rem; font-family: Lato">Search For Statistics!</h2>
+      <br>
+      <p style="text-align:center"><i>Select a city and view it's Air Quality Index, Water Quality, and Climate Change evidence!</i></p>
       <hr >
     <form style="margin-left:29rem; margin-top: 3rem" action="/show_results" method="POST">
         <label style="font-size: 25px; text-align: center; font-family: Lato;">City: &nbsp;</label>
-        <input name=city style="font-size: 19px; text-align: center; font-family: Lato; display: inline-block;" name="title" type="text">
-        
+        <!--<input name=city style="font-size: 19px; text-align: center; font-family: Lato; display: inline-block;" name="title" type="text"> -->
+        <select style="padding:5px; text-decoration:none" name="city" required>
+          <option>Select City</option>
+          <option value="houston">Houston</option>
+          <option value="london">London</option>
+          <option value="delhi">New Delhi</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="tumwater">Tumwater</option>
+          
+          
+          
+          
+        </select>
         <button class="btn btn-dark btn-md" style="font-family:Lato;margin-left:20px;display:inline-block; font-size: 15px; text-align: center;" type="submit">Search</button>
     </div>
     </body>

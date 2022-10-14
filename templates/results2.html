@@ -33,53 +33,6 @@
     <link href="static/css/responsive.css" rel="stylesheet" />
 </head>
 <body style="background-color: lightgreen;">
-    <header class="header_section">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="#">
-              <span>
-                EcoFriend
-              </span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-                <ul class="navbar-nav  ">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/loggedin">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/about">Missions</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/service">Quiz</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/portfolio">Videos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/news"> Articles </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/contact">Tips</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/search">Search</a>
-                  
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-            <a class="btn btn-md btn-primary" style="margin-right:20px" onclick="window.location.href='/'" role="button">LOGOUT</a>
-  
-          </nav>
-        </div>
-      </header>
     {% if city=='tumwater': %}
         <br>
         <br>
@@ -190,6 +143,7 @@
         </li>
     </div>
     {% endif %}
+    <button class="btn btn-md btn-dark" onclick="window.location.href='/'" style="margin-top:1rem; margin-left:82px">< Go Back</button>
     <section class="info_section layout_padding" style="margin-top:4rem;">
         <div class="container">
           <div class="info_social">

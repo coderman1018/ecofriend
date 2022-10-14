@@ -123,6 +123,9 @@ def add(num):
     if mission not in missionscompleted:
         myuser.totalpoints += 10
         myuser.missionscompleted += mission
+    if myuser.totalpoints>=100:
+        myuser.level+=1
+        myuser.points=myuser.points-100
 
     db.session.commit()
     return redirect(url_for('about'))
@@ -164,6 +167,10 @@ def quiz_add(num):
         myuser.totalpoints += 20
         myuser.missionscompleted += quiz
 
+    if myuser.totalpoints>=100:
+        myuser.level+=1
+        myuser.totalpoints=myuser.totalpoints-100
+
     db.session.commit()
 
     return redirect(url_for('loggedin'))
@@ -176,6 +183,11 @@ def search():
 def show_results():
     selected = request.form["city"]
     return render_template("show_results.html",city=selected.lower())
+
+@app.route('/results2',methods=["GET","POST"])
+def show_results2():
+    selected = request.form["city"]
+    return render_template("results2.html",city=selected.lower())
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=81)
