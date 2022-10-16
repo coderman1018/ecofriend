@@ -66,7 +66,7 @@
                     <a class="nav-link" href="/contact">Tips</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/search">Search</a>
+                    <a class="nav-link" href="/search">View Statistics</a>
                   </li>
                 </ul>
               </div>
@@ -76,29 +76,40 @@
           </nav>
         </div>
       </header>
-      <div style="background-color:lightskyblue; padding:50px">
-      <h2 style="text-align:center; margin-top:2rem; font-family: Lato">Search For Statistics!</h2>
-      <br>
-      <p style="text-align:center"><i>Select a city and view it's Air Quality Index, Water Quality, and Climate Change evidence!</i></p>
-      <hr >
-    <form style="margin-left:29rem; margin-top: 3rem" action="/show_results" method="POST">
-        <label style="font-size: 25px; text-align: center; font-family: Lato;">City: &nbsp;</label>
-        <!--<input name=city style="font-size: 19px; text-align: center; font-family: Lato; display: inline-block;" name="title" type="text"> -->
-        <select style="padding:5px; text-decoration:none" name="city" required>
-          <option>Select City</option>
-          <option value="houston">Houston</option>
-          <option value="london">London</option>
-          <option value="delhi">New Delhi</option>
-          <option value="tokyo">Tokyo</option>
-          <option value="tumwater">Tumwater</option>
-          
-          
-          
-          
-        </select>
-        <button class="btn btn-dark btn-md" style="font-family:Lato;margin-left:20px;display:inline-block; font-size: 15px; text-align: center;" type="submit">Search</button>
-        <p style="padding: 20px; padding-left:50px;"><i>New cities coming soon!</i></p>
-      </div>
+      <section id="search" style="background-color:lightskyblue; padding-top: 30px;padding-bottom: 40px;">
+        <div style="background-color:lightskyblue; padding:50px" >
+          <h2 style="text-align:center; margin-top:2rem; font-family: Lato">Search For Statistics!</h2>
+          <br>
+          <p style="text-align:center"><i>Select a city and view it's Particulate matter(PM<sub>2.5</sub>)* pollution level, Water Quality, and Climate Change evidence!</i></p>
+          <hr >
+        <form style="margin-left:29rem; margin-top: 3rem" action="/show_results" method="POST">
+            <label style="font-size: 25px; text-align: center; font-family: Lato;">City: &nbsp;</label>
+            <!--<input name=city style="font-size: 19px; text-align: center; font-family: Lato; display: inline-block;" name="title" type="text"> -->
+            <select style="padding:5px; text-decoration:none" name="city" required>
+              <option>Select City</option>
+              <option value="austin">Austin, TX</option>
+              <option value="chicago">Chicago, IL</option>
+              <option value="columbus">Columbus, OH</option>
+              <option value="houston">Houston, TX</option>
+              <option value="juneau">Juneau, AK</option>
+              <option value="losangeles">Los Angeles, CA</option>
+              <option value="newyork">New York City, NY</option>
+              <option value="olympia">Olympia, WA</option>
+              <option value="portland">Portland, OR</option>
+              <option value="sandiego">San Diego, CA</option>
+              <option value="seattle">Seattle, WA</option>
+      
+              
+              
+              
+              
+            </select>
+            
+            <button class="btn btn-dark btn-md" style="font-family:Lato;margin-left:20px;display:inline-block; font-size: 15px; text-align: center;" type="submit">Search</button>
+            
+        </div>
+        <p style="padding:20px;"><i>*Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high. PM2.5 are tiny particles in the air that reduce visibility and cause the air to appear hazy when levels are elevated.</i></p>
+      </section>
       
     </body>
 </html>

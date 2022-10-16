@@ -182,7 +182,7 @@ def search():
 @app.route('/show_results',methods=["GET","POST"])
 def show_results():
     selected = request.form["city"]
-    return render_template("show_results.html",city=selected.lower())
+    return render_template("show_results.html",city=selected)
 
 @app.route('/results2',methods=["GET","POST"])
 def show_results2():
