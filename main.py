@@ -1,3 +1,4 @@
+from xmlrpc.client import Boolean
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -64,7 +65,8 @@ def signup():
                         country=request.form["country"],
                         level=1,
                         totalpoints=0,
-                        missionscompleted='')
+                        missionscompleted=''
+                                        )
         db.session.add(new_user)
         db.session.commit()
 
@@ -78,7 +80,8 @@ def loggedin():
     return render_template("loggedin.html",
                            user=current.username,
                            level=current.level,
-                           totalpoints=current.totalpoints)
+                           totalpoints=current.totalpoints,
+                           )
 
 
 @app.route('/about')
