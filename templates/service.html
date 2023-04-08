@@ -71,7 +71,7 @@
                   <a class="nav-link" href="/contact">Tips</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/search">View Statistics</a>
+                  <a class="nav-link" href="/search">View Stats</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/loggedin#subscribe">Subscribe</a>
@@ -91,9 +91,9 @@
 
 
   <!-- service section -->
+  <div style="text-align:center">
   <p style="text-align:center;margin-top:3rem;">Score more than 70% to earn points. Points can be earned only once during a month. Don't forget to click add points when you're done!</p>
     <div id="container" style="margin-top:3rem;margin-bottom: 4rem;">
-        <!-- <div id="start" style="font-family: Arial, Helvetica, sans-serif;">Start Quiz!</div> -->
         <div id="start" class="btn btn-lg btn-dark" style="border-radius:50px" >Start Quiz!</div>
         
         <div id="quiz" style="display: none">
@@ -114,11 +114,15 @@
         <div id="scoreContainer" style="display: none"></div>
         
     </div>
-    <button class="btn btn-lg btn-primary" id="getPoints" style="border-radius:10px;margin-left:37.9rem;margin-bottom:5rem;" onclick=clicked() disabled>Get Points</button>
+    <div style="text-align:center">
+    <button class="btn btn-lg btn-primary" id="getPoints" style="border-radius:10px;margin-bottom:5rem;width:70%" onclick=clicked() disabled>Get Points</button>
+  </div>
+</div>
     <script src="static/js/quiz.js"></script>
 </body>
 
   <!-- end service section -->
+
 
   <script>
     function clicked() {
@@ -166,7 +170,7 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2022 EcoFriend
+      &copy; 2023 EcoFriend
       
     </p>
   </section>
